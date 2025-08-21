@@ -1,3 +1,8 @@
 body {
     background-image: url('img/background.png');
 }
+
+.title {
+    font-family: url('fonts/HeadingNow/HeadingNowTrial-04Regular.ttf');
+    font-size: 10;
+}
