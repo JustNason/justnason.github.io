@@ -1,0 +1,11 @@
+ul.topnav li a {
+
+  display: flex;
+  color: #f1f1f1;
+  padding: 7px 25px;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
