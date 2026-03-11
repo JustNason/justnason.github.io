@@ -1,184 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+<html>
+  <head>
+    <link rel="stylesheet" href="lemonmilk-regular.otf">
+    <link rel="stylesheet" href="style.css">
+  </head>
+ 
+  <header>
+    <ul class="topnav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </header>
+  <body>
+    <canvas id="container"></canvas>
+    <div id="title"><h1>Nason McGillin</h1></div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+            }
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f4f4f4;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #eac766 0%, #a24b4b 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background: #333;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #eac766;
-        }
-        
-        section {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-        
-        h2 {
-            color: #eac766;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .skill-tag {
-            background: #667eea;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Nason McGillin</h1>
-        <p>Full Stack Developer | Problem Solver | Tech Enthusiast</p>
-    </header>
+    </script>
     
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my coding portfolio. I'm a passionate developer with expertise in building web applications and solving complex problems. With experience in multiple programming languages and frameworks, I create elegant solutions for real-world challenges.</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>Description of your project and the technologies used.</p>
-                <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Description of your project and the technologies used.</p>
-                <p><strong>Tech:</strong> React, Node.js, MongoDB</p>
-            </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>Description of your project and the technologies used.</p>
-                <p><strong>Tech:</strong> Python, Django, PostgreSQL</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">HTML/CSS</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Database Design</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">REST APIs</span>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com" target="_blank">github.com/yourprofile</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/yourprofile</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-</body>
+    <script type="module" src="/main.js"></script>
+
+  </body>
 </html>

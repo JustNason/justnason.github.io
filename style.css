@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Lemon Milk';
+  src: url("./lemonmilk-regular.otf");
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Lemon Milk', sans-serif;
+   text-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#title {
+  position: absolute;
+  width: 100%;
+}
+
+#container {
+  position: absolute;
+  display: block;
+}
+
+ul.topnav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+ul.topnav li a {
+
+  display: flex;
+  color: #f1f1f1;
+  padding: 7px 13px;
+  margin-left: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul.topnav li a:hover {
+  background-color: #4d4d4d50;
+  color: rgb(255, 255, 255);
+}
