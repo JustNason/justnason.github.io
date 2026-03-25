@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="Nexa-Heavy.ttf">
     <link rel="stylesheet" href="style.css">
+    <title>Wassap</title>
   </head>
  
   <header>
@@ -15,7 +15,19 @@
   </header>
   <body>
     <canvas id="container"></canvas>
-    <div id="title_div"><h1 id="title">JustNason</h1><h2>Game Developer | Robotics Developer</h2><h3 id="Text">Text</h3></div>
+    <div id="title_div">
+      <h1 class="title" id="title">JustNason</h1>
+      <h2 class="tagline">Game Developer | Robotics Developer</h2>
+    </div>
+    <div id="projects_div"><h2 class="projects">Projects:</h2>
+      <div class="project_box"><img class="project_box" src="Models\Earth\textures\Material.002_diffuse.jpeg"
+       width="300">
+       <div class="project_description_box">
+          <h1 class="project_box">ROS2Unreal</h1>
+          <h2 class="project_description">Unreal Engine Plugin for linking ROS2 topics in runtime.</h2>
+        </div>
+      </div>
+    </div>
 
     <script type="importmap">
         {

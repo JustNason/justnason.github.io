@@ -8,11 +8,13 @@ import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js"
 import { FilmPass } from "three/addons/postprocessing/FilmPass.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-const title = document.getElementById("title");
 
-title.style.marginTop = (window.innerHeight / 2 - 100).toString() + "px";
+const title = document.getElementById("title_div");
 
-console.log("hello");
+title.style.marginTop = ((window.innerHeight / 2) - (125)).toString() + "px";
+
+title.style.height = "auto";
+console.log(title.clientHeight)
 const container = document.getElementById("container");
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -104,6 +106,18 @@ const cube_3 = new Wireframe(box_wireframe_3, box_material_3);
 scene.add(cube_3);
 cube_3.position.x = -1.5;
 
+// const sphere_geo = new THREE.IcosahedronGeometry(1, 1);
+// const sphere_wireframe = new WireframeGeometry2(sphere_geo);
+// const sphere_mat = new LineMaterial({
+//   color: 0xffffff,
+//   linewidth: 4,
+//   resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
+// });
+// const sphere = new Wireframe(sphere_wireframe, sphere_mat);
+// scene.add(sphere);
+// sphere.position.y = -3;
+// sphere.position.x = -1.7;
+
 function addStars() {
   const starsGeometry = new THREE.BufferGeometry();
   const starCount = 10000;
@@ -112,7 +126,7 @@ function addStars() {
   for (let i = 0; i < starCount; i++) {
     posArr[i * 3] = THREE.MathUtils.randFloatSpread(2000);
     posArr[i * 3 + 1] = THREE.MathUtils.randFloatSpread(2000);
-    posArr[i * 3 + 2] = THREE.MathUtils.randFloatSpread(500) - 500;
+    posArr[i * 3 + 2] = THREE.MathUtils.randFloatSpread(100) - 500;
   }
 
   starsGeometry.setAttribute("position", new THREE.BufferAttribute(posArr, 3));
@@ -152,12 +166,12 @@ function loadEarth() {
     scene.add(root);
     root.scale.set(0.02,0.02,0.02)
     root.position.z = -2;
-    root.position.y = -3;
+    root.position.y = -3.5;
     root.rotation.x = -2.3;
   });
 }
 
-loadEarth();
+// loadEarth();
 addStars();
 
 //const pointlight = new THREE.PointLight(0xffffff, 1, 0, .1);
@@ -172,11 +186,13 @@ let camera_offset = 0;
 function animation(time) {
   cube.rotation.x = -(window.scrollY / 250) - 1.0;
   cube.rotation.z = -(window.scrollY / 250) - 1.0;
-  camera.position.y = -(window.scrollY / 500) - 1.5;
+  camera.position.y = -(window.scrollY / 1000) - 1.5;
   cube_2.rotation.y = window.scrollY / 250 - 0.3;
   cube_2.rotation.x = -(window.scrollY / 250) - 0.3;
   cube_3.rotation.y = -(window.scrollY / 250) - 0.6;
   cube_3.rotation.x = -(window.scrollY / 250) - 0.6;
+
+  // sphere.rotation.x = -(window.scrollY / 250) - 1.0;
 
   //   camera.position.x = (mouse_x - (window.innerWidth / 2)) / 10000;
   //   camera.position.y = (mouse_y / 10000) + camera_offset;
