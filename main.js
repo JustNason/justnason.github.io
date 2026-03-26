@@ -11,10 +11,8 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const title = document.getElementById("title_div");
 
-title.style.marginTop = ((window.innerHeight / 2) - (125)).toString() + "px";
+title.style.marginTop = ((window.innerHeight / 2) - (title.clientHeight / 2)).toString() + "px";
 
-title.style.height = "auto";
-console.log(title.clientHeight)
 const container = document.getElementById("container");
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -106,6 +104,22 @@ const cube_3 = new Wireframe(box_wireframe_3, box_material_3);
 scene.add(cube_3);
 cube_3.position.x = -1.5;
 
+const cone_geo = new THREE.ConeGeometry(0.75,2 , 8, 1);
+const cone_wireframe = new WireframeGeometry2(cone_geo);
+const cone_mat = new LineMaterial({
+  color: 0xffff00,
+  linewidth: 3,
+  resolution: new THREE.Vector2(window.innerWidth, window.innerHeight)
+});
+const cone = new Wireframe(cone_wireframe, cone_mat);
+scene.add(cone);
+cone.position.z = -8;
+cone.position.y = -4;
+cone.position.x = -5;
+
+cone.rotation.z = (25) * Math.PI/180
+cone.rotation.x = (-25) * Math.PI/180
+
 // const sphere_geo = new THREE.IcosahedronGeometry(1, 1);
 // const sphere_wireframe = new WireframeGeometry2(sphere_geo);
 // const sphere_mat = new LineMaterial({
@@ -191,7 +205,8 @@ function animation(time) {
   cube_2.rotation.x = -(window.scrollY / 250) - 0.3;
   cube_3.rotation.y = -(window.scrollY / 250) - 0.6;
   cube_3.rotation.x = -(window.scrollY / 250) - 0.6;
-
+  cone.rotation.z = (window.scrollY / 250) - ((25) * Math.PI/180);
+  cone.rotation.x = (window.scrollY / 250) - (-25) * Math.PI/180;
   // sphere.rotation.x = -(window.scrollY / 250) - 1.0;
 
   //   camera.position.x = (mouse_x - (window.innerWidth / 2)) / 10000;

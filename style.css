@@ -1,27 +1,42 @@
 @font-face {
-  font-family: 'Nexa';
-  src: url("./Nexa-Heavy.ttf");
+  font-family: 'Bebas Neue';
+  src: url("./Fonts/BabasNeue/BebasNeue-Regular.ttf");
 }
+
+@font-face {
+  font-family: 'Rabbid Highway Sign II';
+  src: url("./Fonts/RabbidHighway/RabbidHighwaySignII.otf");
+}
+
+@font-face {
+  font-family: 'Natural Mono';
+  src: url("./Fonts/NaturalMono/NaturalMono-Regular.ttf");
+}
+
+
 h1 {
   font-size: 100px;
-  font-family: 'Nexa', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 
 }
 h1.title {
-  font-size: 100px;
-  font-family: 'Nexa', sans-serif;
+  font-size: 200px;
+  font-family: 'Bebas Neue', sans-serif;
 	margin: 0;
 }
 
 h2.tagline {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Natural Mono', sans-serif;
   text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
-  font-size: 32px;
+  font-size: 25px;
   margin-top: -20px;
 }
 h2.projects {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 0px 6px 20px rgba(0, 0, 0, 0.608);
+}
+h2.project_description {
+  font-family: 'Natural Mono', sans-serif;
 }
 body {
   margin: 0;
@@ -46,6 +61,10 @@ body {
   position: absolute;
   color: white;
 }
+
+#project_list {
+  display: flex;
+}
 h1.project_box {
   color: white;
   font-size: 15px;
@@ -62,9 +81,11 @@ div.project_box {
   width: 300px;
   height: 300px;
   overflow: hidden;
+  margin-right: 40px;
 }
 div.project_description_box {
-  padding-left: 25px
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 img.project_box {
@@ -126,4 +147,58 @@ ul.topnav li a {
 ul.topnav li a:hover {
   background-color: #4d4d4d50;
   color: rgb(255, 255, 255);
+}
+
+.arrow_anim {
+  position: relative;
+  height: 4em;
+}
+.arrow {
+  border: solid #ffffff;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: 
+    translateX(-50%)
+    rotate(45deg)
+  ;
+}
+
+.arrow:nth-child(2) {
+  animation:
+    arrow1 1.5s
+    ease-in-out infinite;
+}
+
+.arrow:nth-child(3) {
+  animation:
+    arrow2 1.5s
+    ease-in-out infinite;
+}
+
+@keyframes arrow_anim {
+  0% {
+    bottom: 80%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes arrow1 {
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}
+@keyframes arrow2 {
+  100% {
+    opacity: 0;
+    top: 50%;
+  }
 }
