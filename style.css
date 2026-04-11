@@ -13,91 +13,83 @@
   src: url("./Fonts/NaturalMono/NaturalMono-Regular.ttf");
 }
 
-
-h1 {
-  font-size: 100px;
-  font-family: 'Bebas Neue', sans-serif;
-
-}
-h1.title {
-  font-size: 200px;
-  font-family: 'Bebas Neue', sans-serif;
-	margin: 0;
-}
-
-h2.tagline {
-  font-family: 'Natural Mono', sans-serif;
-  text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
-  font-size: 25px;
-  margin-top: -20px;
-}
-h2.projects {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 0px 6px 20px rgba(0, 0, 0, 0.608);
-}
-h2.project_description {
-  font-family: 'Natural Mono', sans-serif;
-}
 body {
   margin: 0;
-  padding: 0;
-  background-color: black;
+  background: #020617;
+  background-image: 
+    linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 20% 15%, rgba(236, 72, 153, 0.14) 0%, rgba(168, 85, 247, 0.04) 35%, transparent 65%),
+    radial-gradient(circle at 80% 25%, rgba(236, 72, 153, 0.12) 0%, rgba(168, 85, 247, 0.03) 38%, transparent 68%),
+    radial-gradient(circle at 15% 75%, rgba(236, 72, 153, 0.10) 0%, rgba(168, 85, 247, 0.02) 42%, transparent 72%),
+    radial-gradient(circle at 85% 80%, rgba(236, 72, 153, 0.13) 0%, rgba(168, 85, 247, 0.04) 40%, transparent 70%),
+    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  background-size: 40px 40px, 40px 40px, 120% 120%, 120% 120%, 120% 120%, 120% 120%, 100% 100%;
 }
 
-#title_div {
-  position: absolute;
-  width: 100%;
-  text-shadow: 0px 6px 20px rgba(0, 0, 0, 0.608);
-  color: white;
-  text-align: center;
+div.title {
   align-items: center;
-  height: auto;
-  display: flexbox;
-}
-
-#projects_div {
-  margin-top: 800px;
-  margin-left: 200px;
-  position: absolute;
-  color: white;
-}
-
-#project_list {
+  color: #f1f1f1;
   display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
 }
-h1.project_box {
-  color: white;
-  font-size: 15px;
+
+h1.title {
+  color: #fff;
+  font-size: 120px;
+  font-family: Bebas Neue;
 }
-h2.project_description {
-  color: white;
-  font-size: 12px;
+
+p.title {
+  color: lightgray;
+  margin-top: -75px;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'Natural Mono';
 }
+
+button.title {
+  background-color: #fff;
+  border: rgba(0, 0, 0, 0.2);
+  border-width: 5px;
+  border-radius: 30px;
+  padding: 15px 30px 15px 30px;
+  margin-top: 30px;
+  font-family: 'Natural Mono';
+  font-weight: bold;
+}
+
+button.title:hover {
+  background-color: #b7b7b7;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
 div.project_box {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(134, 134, 134, 0.3);
-  border-radius: 15px;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  margin-right: 40px;
+  align-items: center;
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-div.project_description_box {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-img.project_box {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-#container {
-  position: absolute;
-  display: block;
+div.projects {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
+div.projects h1 {
+  color: white;
+  font-family: 'Bebas Neue';
+  font-size: 48px;
+  margin-bottom: 50px;
+}
 ul.topnav {
   display: flex;
   justify-content: flex-end;
@@ -109,8 +101,8 @@ ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(134, 134, 134, 0.3);
   border-radius: 0px;
 }
@@ -128,77 +120,120 @@ ul.topnav li a {
   text-decoration: none;
   padding: 7px 13px;
   border-radius: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family:'Natural Mono';
+  margin-right: 10px;
 }
 
+#github {
+  background-color: white;
+  color: black;
+}
 
-/* ul.topnav li a {
-
-  display: flex;
-  color: #f1f1f1;
-  padding: 7px 25px;
+#github_logo {
+  height: 15px;
   margin-left: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 14px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-} */
+}
+
 ul.topnav li a:hover {
   background-color: #4d4d4d50;
   color: rgb(255, 255, 255);
 }
 
-.arrow_anim {
-  position: relative;
-  height: 4em;
+div.project_card {
+  background: rgba(10, 10, 10, 0.35);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-right: 50px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
 }
-.arrow {
-  border: solid #ffffff;
-  border-width: 0 5px 5px 0;
-  display: inline-block;
-  padding: 12px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: 
-    translateX(-50%)
-    rotate(45deg)
-  ;
+.project_card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
-
-.arrow:nth-child(2) {
-  animation:
-    arrow1 1.5s
-    ease-in-out infinite;
-}
-
-.arrow:nth-child(3) {
-  animation:
-    arrow2 1.5s
-    ease-in-out infinite;
+div.project_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes arrow_anim {
-  0% {
-    bottom: 80%;
-    opacity: 1;
-  }
-  100% {
-    bottom: 20%;
-    opacity: 0;
-  }
+div.project_description {
+  font-family: 'Natural Mono';
+  margin: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes arrow1 {
-  100% {
-    opacity: 0;
-    top: 100%;
-  }
+div.project_description p {
+  font-size: 12px;
+  margin: -30px 0 0;
+  line-height: 1.5;
 }
-@keyframes arrow2 {
-  100% {
-    opacity: 0;
-    top: 50%;
-  }
+
+div.project_description h4 {
+  font-size: 32px;
+  font-family: 'Bebas Neue';
+  margin-top: 10px;
 }
+
+div.project_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.project_button {
+  background-color: #fff;
+  border: rgba(0, 0, 0, 0.2);
+  border-width: 5px;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Natural Mono';
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 20px;
+  color: #020617;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.project_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0px 20px 30px 20px;
+}
+
+.tag {
+  font-size: 10px;
+  font-family: 'Natural Mono';
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  transition: 0.2s ease;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  background: rgba(122, 122, 122, 0.2);
+  border-color: rgba(36, 36, 36, 0.5);
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 0, 0, 0.5)
+
+}
+
