@@ -118,6 +118,16 @@ ul.topnav li.brand {
   color: #fff;
 }
 
+ul.topnav li.brand a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+ul.topnav li.brand img {
+  display: block;
+}
+
 ul.topnav li a {
   color: #f1f1f1;
   text-decoration: none;
