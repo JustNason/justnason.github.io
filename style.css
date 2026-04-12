@@ -128,7 +128,38 @@ ul.topnav li a {
 }
 
 @media screen and (max-width: 600px) {
-  ul.topnav li:not(.brand):not(:last-child) {
+  body {
+    padding-top: 90px;
+  }
+
+  div.title {
+    height: auto;
+    min-height: calc(100vh - 90px);
+    padding: 60px 20px 40px;
+  }
+
+  h1.title {
+    font-size: 64px;
+  }
+
+  p.title {
+    margin-top: 20px;
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  a.title {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  ul.topnav {
+    flex-wrap: wrap;
+    max-height: 70px;
+    overflow: hidden;
+  }
+
+  ul.topnav li:not(.brand):not(.icon) {
     display: none;
   }
 
@@ -141,9 +172,10 @@ ul.topnav li a {
     flex-direction: column;
     align-items: stretch;
     padding-bottom: 20px;
+    max-height: 900px;
   }
 
-  ul.topnav.responsive li:not(.brand):not(:last-child) {
+  ul.topnav.responsive li:not(.brand):not(.icon) {
     display: block;
     width: 100%;
     margin-top: 10px;
@@ -167,6 +199,103 @@ ul.topnav li a {
     width: 100%;
     text-align: left;
     box-sizing: border-box;
+    margin-right: 0;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  div.project_box {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  div.project_card {
+    width: min(100%, 340px);
+    margin: 0 auto 20px;
+    height: auto;
+  }
+
+  div.project_card img {
+    height: 200px;
+  }
+
+  div.project_description {
+    margin: 16px;
+  }
+
+  div.project_description h4 {
+    font-size: 28px;
+  }
+
+  div.project_description p {
+    font-size: 14px;
+    margin: 10px 0 0;
+  }
+
+  div.project_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .project_button {
+    margin: 0;
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .project_tags {
+    margin: 0 16px 20px 16px;
+    justify-content: center;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  div.projects {
+    height: auto;
+    padding: 40px 0 20px;
+  }
+
+  div.contact {
+    height: auto;
+    margin: 80px 20px 40px;
+  }
+
+  h1.contact {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  #email {
+    width: auto;
+    padding: 18px;
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  div.project_box {
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  div.project_card {
+    width: min(320px, 100%);
+    margin: 0 auto 24px;
   }
 }
 
@@ -313,7 +442,7 @@ p.contact {
 
 #email {
   color: red;
-  font-size: 30px;
+  font-size: 12px;
   margin-top: 20px;
   background: rgba(10, 10, 10, 0.35);
   backdrop-filter: blur(14px);
