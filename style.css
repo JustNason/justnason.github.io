@@ -147,7 +147,8 @@ div.project_card {
   overflow: hidden;
   width: 300px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  margin-right: 50px;
+  margin-right: 25px;
+  margin-left: 25px;
   height: 500px;
   display: flex;
   flex-direction: column;
