@@ -7,21 +7,21 @@
  
   <header>
     <ul class="topnav">
-      <li class="brand"><a  href="/">JustNason</a></li>
-      <li><a href="/">Projects</a></li>
+      <li class="brand"><a  href="#title_section">JustNason</a></li>
+      <li><a href="/projects">Projects</a></li>
       <li><a href="/about">Games</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="#contact_section">Contact</a></li>
       <li><a id="github" href="https://github.com/JustNason">GitHub<img id="github_logo" src="Images/GitHub_Invertocat_Black.svg"></a></li>
     </ul>
   </header>
   <body>
-    <div class="title">
+    <div class="title" id="title_section">
       <h1 class="title">Just<b class="red">Nason</b></h1><br>
       <p class="title">I'm a developer that tries to make stuff in <b class="red">C++</b>, <b class="red">HTML</b> and <b class="red">Unreal Engine</b>, though most of the time I never finish a project.</p>
-      <button class="title">Explore Projects</button>
+      <a class="title" href="#projects_section">Explore Projects</a>
     </div>
-    <div class="projects">
-      <h1 class="projects_title">Featured <b class="red">Projects</b></h1>
+    <div class="projects" >
+      <h1 id="projects_section" class="projects_title">Featured <b class="red">Projects</b></h1>
       <div class="project_box">
         <!-- start of project card -->
         <div class="project_card">
@@ -78,9 +78,10 @@
         </div>
         <!-- end of project box -->
       </div>
-      <button class="title" style="margin-top: 50px;">All Projects -></button>
+      <a class="title" style="margin-top: 50px;">All Projects -></a>
     </div>
-    <div class="projects" style="margin-top: 200px;">
+    <!-- start of featured games section -->
+    <div class="projects" style="margin-top: 200px;" id="games_section">
       <h1 class="projects_title">Featured <b class="red">Games</b></h1>
         <div class="project_box">
           <!-- start of project card -->
@@ -101,8 +102,16 @@
           </div>
           <!-- end of project box -->
         </div>
-        <button class="title" style="margin-top: 50px;">All Games -></button>
+        <a class="title" style="margin-top: 50px;">All Games -></a>
       </div>
+    </div>
+    <!-- end of featured games section -->
+    <div class="contact" id="contact_section">
+      <h1 class="contact">
+        Contact <b class="red">Me</b>
+      </h1>
+      <p class="contact">If you feel the need to contact me for whatever reason, feel free to here:</p>
+      <p id="email" class="contact">broboticsidiotlabs@gmail.com</p>
     </div>
     <footer class="footer">
       <p>© 2026 Nason McGillin</p>

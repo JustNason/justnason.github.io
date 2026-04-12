@@ -50,7 +50,7 @@ p.title {
   font-family: 'Natural Mono';
 }
 
-button.title {
+a.title {
   background-color: #fff;
   border: rgba(0, 0, 0, 0.2);
   border-width: 5px;
@@ -59,9 +59,11 @@ button.title {
   margin-top: 30px;
   font-family: 'Natural Mono';
   font-weight: bold;
+  text-decoration: none;
+  color: #020617;
 }
 
-button.title:hover {
+a.title:hover {
   background-color: #b7b7b7;
 }
 
@@ -238,3 +240,66 @@ div.project_buttons {
 
 }
 
+h1.contact {
+  color: white;
+  font-family: 'Bebas Neue';
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+div.contact {
+  height: 70vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
+
+p.contact {
+  color: lightgray;
+  margin-top: -20px;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'Natural Mono';
+}
+
+#email {
+  color: red;
+  font-size: 30px;
+  margin-top: 20px;
+  background: rgba(10, 10, 10, 0.35);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#email:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  color: white;
+  font-family: 'Natural Mono';
+  padding-left: 20px;
+  background: rgba(10, 10, 10, 0.35);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+#projects_section {
+    scroll-margin-top: 80px; 
+}
