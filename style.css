@@ -159,7 +159,7 @@ ul.topnav li a {
     overflow: hidden;
   }
 
-  ul.topnav li:not(.brand):not(.icon) {
+  ul.topnav li:not(.brand):not(:last-child) {
     display: none;
   }
 
@@ -168,14 +168,18 @@ ul.topnav li a {
   }
 
   ul.topnav.responsive {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     flex-direction: column;
     align-items: stretch;
     padding-bottom: 20px;
     max-height: 900px;
   }
 
-  ul.topnav.responsive li:not(.brand):not(.icon) {
+  ul.topnav.responsive li:not(.brand):not(:last-child) {
     display: block;
     width: 100%;
     margin-top: 10px;
